@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta
+         name="viewport" content="width=device-width, initial-scale=1.0">
+      <!--Author-->
+      <meta
+         name="author" content="Muladi Péter">
+      <!--Meta keywords-->
+      <meta
+         name="keywords" content="pc gamer webshop, gamer table, gamer keyboard, gamer mouse, gamer chair, gamer headset">
+      <!--Meta description-->
+      <meta
+         name="description" content="selection of Pc Gamer ">
+      <!--CSS-->
+      <link rel="stylesheet" href="../bootstrap-style/css/bootstrap.min.css">
+      <!--Icon Fonts-->
+      <link
+         rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+      <!--CSS file-->
+      <link
+         rel="stylesheet" type="text/css" href="../template-css/style.css">
+      <!--Favicon-->
+      <link
+         rel="icon" type="png" href="../pics-carsouel//favicon.png">
+      <!--Mapbox-->
+      <link rel="stylesheet" href="../mapbox-style/mapbox-gl.css">
+      <script src="../mapbox-style/mapbox-gl.js"></script>
+      <title>Gamer Webshop</title>
+   </head>
+   <body>
+      <!--Sale Banner-->
+      <div class="action">
+         <p class="h5 m-3">
+            🔥🔥 10% discount for every first registration
+         </p>
+         <button type="submit" class="btn btn-warning btn-sm text-black">Sign Up</button>
+      </div>
+      <!-- Cart Items -->
+      <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+         <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLongTitle"><i class="bi bi-cart-check-fill"></i> Cart Item</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                  </button>
+               </div>
+               <div class="modal-body">
+                  <ul class="list-group d-inline-block">
+                     <li class="list-group-item mt-2">Product 1</li>
+                     <li class="list-group-item mt-2">Product 2</li>
+                     <li class="list-group-item mt-2">Product 3</li>
+                  </ul>
+               </div>
+               <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="Wrapper">
+         <div class="col">
+            <!-- Navbar -->
+            <div id="menu" class="container-fluid d-flex justify-content-center bg-dark fixed-top sticky-top">
+               <div class="col">
+                  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                     <div class="container">
+                        <a class="navbar-brand p-2" href="#">
+                        <img class="logo" src="../pics-carsouel//favicon.png">
+                        Gamer Webshop
+                        </a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                              <li class="nav-item">
+                                 <a class="nav-link active" aria-current="page" href="#">Main Page</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a class="nav-link active" aria-current="page" href="#about">About Us</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a class="nav-link active" aria-current="page" href="#map">Contact</a>
+                              </li>
+                              <li class="nav-item dropdown">
+                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                 Products
+                                 </a>
+                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li>
+                                       <a class="dropdown-item" href="#">
+                                       <i class="bi bi-arrow-right-circle m-2"></i>Tables
+                                       </a>
+                                    </li>
+                                    <li>
+                                       <hr class="dropdown-divider">
+                                    </li>
+                                    <li>
+                                       <a class="dropdown-item" href="#">
+                                       <i class="bi bi-keyboard m-2"></i>Keyboards
+                                       </a>
+                                    </li>
+                                    <li>
+                                       <hr class="dropdown-divider">
+                                    </li>
+                                    <li>
+                                       <a class="dropdown-item" href="#">
+                                       <i class="bi bi-mouse2 m-2"></i>Mouse
+                                       </a>
+                                    </li>
+                                    <li>
+                                       <hr class="dropdown-divider">
+                                    </li>
+                                    <li>
+                                       <a class="dropdown-item" href="#">
+                                       <i class="bi bi-arrow-right-circle m-2"></i>Chairs
+                                       </a>
+                                    </li>
+                                    <li>
+                                       <hr class="dropdown-divider">
+                                    </li>
+                                    <li>
+                                       <a class="dropdown-item" href="#">
+                                       <i class="bi bi-headset m-2"></i>Headset
+                                       </a>
+                                    </li>
+                                 </ul>
+                              </li>
+                           </ul>
+                           <form class="d-flex">
+                              <input class="form-control me-2" type="search" placeholder="Search..." aria-label="Search">
+                              <button class="btn btn-success" type="submit">Search</button>
+                           </form>
+                        </div>
+                        <!--CART btn-->
+                        <button type="button" class="btn btn-primary position-relative m-2" data-toggle="modal" data-target="#exampleModalCenter">
+                        <i class="bi bi-cart-check-fill"></i>Cart
+                        <span class="position-absolute top-0 start-100 translate-middle m-1 p-1 bg-danger rounded border border-light rounded-pill">
+                        3</span></button>
+                     </div>
+                  </nav>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!--Carousel-->
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+         <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
+         </div>
+         <div class="carousel-inner">
+            <div class="carousel-item active">
+               <img src="../pics-carsouel/pics1.png" class="d-block w-100">
+            </div>
+            <div class="carousel-item">
+               <img src="../pics-carsouel/pics2.png" class="d-block w-100">
+            </div>
+            <div class="carousel-item">
+               <img src="../pics-carsouel/pics3.png" class="d-block w-100">
+            </div>
+            <div class="carousel-item">
+               <img src="../pics-carsouel/pics4.png" class="d-block w-100">
+            </div>
+            <div class="carousel-item">
+               <img src="../pics-carsouel/pics5.png" class="d-block w-100">
+            </div>
+            <div class="carousel-item">
+               <img src="../pics-carsouel/pics6.png" class="d-block w-100">
+            </div>
+         </div>
+      </div>
+      <!--Welcome-->
+      <p id="welcome" class="lead text-center display-4 h-3 p-3 text-white fw-normal">
+         Welcome to the world of Gamers!
+      </p>
+      <h1 id="welcome2" class="display-4 text-center p-3 text-danger">Nearly 500 types of Products</h1>
+      <!--Products-->
+      <h3 class="m-3 display-6 text-success">Featured products</h3>
+      <div class="row m-1 justify-content-center">
+         <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card mt-2">
+               <a href=""><img src="../pics-products/keyboard.jpg" class="card-img-top" alt="EL1 4 in 1 Gamer set"></a>
+               <div class="card-body">
+                  <h6 class="card-title">A+ EL1 4 in 1 Gamer set, Keyboard, Mouse, Headphones, Mouse pad</h6>
+                  <p class="fw-bold text-danger text-center mb-2">$40 USD</p>
+                  <div class="row">
+                     <a id="product-button" href="#" class="btn btn-danger">
+                     <i class="bi bi-cart-fill m-3"></i>Add to Cart</a>
+                     <a class="text-center text-decoration-none mt-2" href="">Keyboards</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card mt-2">
+               <a href=""><img src="../pics-products/keyboard2.jpg" class="card-img-top" alt="White Shark SPARTAN mechanical RGB gamer keyboard"></a>
+               <div class="card-body">
+                  <h6 class="card-title">White Shark SPARTAN mechanical RGB gamer keyboard with LED</h6>
+                  <p class="fw-bold text-danger text-center mb-2">$39 USD
+                  </p>
+                  <div class="row">
+                     <a id="product-button" href="#" class="btn btn-danger">
+                     <i class="bi bi-cart-fill m-3"></i>Add to Cart</a>
+                     <a class="text-center text-decoration-none mt-2" href="">Keyboards</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card mt-2">
+               <a href=""><img src="../pics-products/chair-top.png" class="card-img-top" alt="Zenga Gamer chair"></a>
+               <div class="card-body">
+                  <h6 class="card-title">Zenga Gamer Chair, Eco leather, Extreme GT Blue, Ergonomic</h6>
+                  <p class="fw-bold text-danger text-center mb-2">$15 USD</p>
+                  <div class="row">
+                     <a id="product-button" href="#" class="btn btn-danger">
+                     <i class="bi bi-cart-fill m-3"></i>Add to Cart</a>
+                     <a class="text-center text-decoration-none mt-2" href="">Chairs</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card mt-2">
+               <a href=""><img src="../pics-products/chair2.jpg" class="card-img-top" alt="White Shark Thunderbolt chair"></a>
+               <div class="card-body">
+                  <h6 class="card-title">White Shark Thunderbolt RGB black artificial leather gamer chair</h6>
+                  <p class="fw-bold text-danger text-center mb-2">$249 USD</p>
+                  <div class="row">
+                     <a id="product-button" href="#" class="btn btn-danger">
+                     <i class="bi bi-cart-fill m-3"></i>Add to Cart</a>
+                     <a class="text-center text-decoration-none mt-2" href="">Chairs</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card mt-2">
+               <a href=""><img src="../pics-products/table1.jpg" class="card-img-top" alt="King Size gamer desk"></a>
+               <div class="card-body">
+                  <h6 class="card-title">Dr.Shield EVO 2.0 Professional Gamer Desk, King Size</h6>
+                  <p class="fw-bold text-danger text-center mb-2">$149 USD</p>
+                  <div class="row">
+                     <a id="product-button" href="#" class="btn btn-danger">
+                     <i class="bi bi-cart-fill m-3"></i>Add to Cart</a>
+                     <a class="text-center text-decoration-none mt-2" href="">Table</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card mt-2">
+               <a href=""><img src="../pics-products/mouse.png" class="card-img-top" alt="gaming mouse"></a>
+               <div class="card-body">
+                  <h6 class="card-title">Trust GXT 107 Izza Wireless Gaming mouse, USB, RGB, black</h6>
+                  <p class="fw-bold text-danger text-center mb-2">$15 USD</p>
+                  <div class="row">
+                     <a id="product-button" href="#" class="btn btn-danger">
+                     <i class="bi bi-cart-fill m-3"></i>Add to Cart</a>
+                     <a class="text-center text-decoration-none mt-2" href="">Mouse</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card mt-2">
+               <a href=""><img src="../pics-products/table2.jpg" class="card-img-top" alt="White Shark FIRE-SHADOW Gamer table"></a>
+               <div class="card-body">
+                  <h6 class="card-title">White Shark FIRE-SHADOW Gamer table, red/black</h6>
+                  <p class="fw-bold text-danger text-center mb-2">$199 USD</p>
+                  <div class="row">
+                     <a id="product-button" href="#" class="btn btn-danger">
+                     <i class="bi bi-cart-fill m-3"></i>Add to Cart</a>
+                     <a class="text-center text-decoration-none mt-2" href="">Table</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card mt-2">
+               <a href=""><img src="../pics-products/headset-top1.jpg" class="card-img-top" alt="A4tech BLOODY G300 Gamer headset"></a>
+               <div class="card-body">
+                  <h6 class="card-title">A4tech BLOODY G300 Gamer headset, available in black</h6>
+                  <p class="fw-bold text-danger text-center mb-2">$14 USD</p>
+                  <div class="row">
+                     <a id="product-button" href="#" class="btn btn-danger">
+                     <i class="bi bi-cart-fill m-3"></i>Add to Cart</a>
+                     <a class="text-center text-decoration-none mt-2" href="">Headset</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!--Banner-->
+      <div class="banner container-fluid mt-3">
+         <img class="img-fluid w-100" src="../pics banner/banner.png" alt="">
+      </div>
+      <!--Top Products-->
+      <div class="row p-2">
+         <h3 class="m-2 display-6 text-success">Top Products</h3>
+         <div class="col-sm-6 col-md-6 col-lg-3">
+            <div class="card mt-2">
+               <a href=""><img src="../pics-products/keyboard-top.jpg" class="card-img-top" alt="Redragon 4 in 1 set"></a>
+               <div class="card-body">
+                  <h6 class="card-title">Redragon 4 in 1 Gamer set</h6>
+                  <p class="fw-bold text-danger text-center mb-2">$59 USD</p>
+                  <div class="row">
+                     <a id="product-button" href="#" class="btn btn-danger">
+                     <i class="bi bi-cart-fill m-3"></i>Add To Cart</a>
+                     <a class="text-center text-decoration-none mt-2" href="">Keyboards</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="col-sm-6 col-md-6 col-lg-3">
+            <div class="card mt-2">
+               <a href=""><img src="../pics-products/gamer-pouf-top.jpg" class="card-img-top" alt="X-Game Winner 1.5 Gamer pouffe"></a>
+               <div class="card-body">
+                  <h6 class="card-title">X-Game Winner 1.5 Gamer pouffe</h6>
+                  <p class="fw-bold text-danger text-center mb-2">$39 USD</p>
+                  <div class="row">
+                     <a id="product-button" href="#" class="btn btn-danger">
+                     <i class="bi bi-cart-fill m-3"></i>Add to Cart</a>
+                     <a class="text-center text-decoration-none mt-2" href="">Chairs</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="col-sm-6 col-md-6 col-lg-3">
+            <div class="card mt-2">
+               <a href=""><img src="../pics-products/headset-top.jpg" class="card-img-top" alt="Marvel headset"></a>
+               <div class="card-body">
+                  <h6 class="card-title">Marvel headset in black</h6>
+                  <p class="fw-bold text-danger text-center mb-2">$39 USD</p>
+                  <div class="row">
+                     <a id="product-button" href="#" class="btn btn-danger">
+                     <i class="bi bi-cart-fill m-3"></i>Add to Cart</a>
+                     <a class="text-center text-decoration-none mt-2" href="">Headset</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="col-sm-6 col-md-6 col-lg-3">
+            <div class="card mt-2">
+               <a href=""><img src="../pics-products/table-top.jpg" class="card-img-top" alt="Arka Chairs Gamer table Racer Z16"></a>
+               <div class="card-body">
+                  <h6 class="card-title">Arka Chairs Gamer table Racer Z16</h6>
+                  <p class="fw-bold text-danger text-center mb-2">$99 USD</p>
+                  <div class="row">
+                     <a id="product-button" href="#" class="btn btn-danger">
+                     <i class="bi bi-cart-fill m-3"></i>Add to Cart</a>
+                     <a class="text-center text-decoration-none mt-2" href="">Table</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!--Info-->
+      <h3 class="m-4 display-6 text-success text-center ">
+         <i class="bi bi-info-square p-2"></i>Information
+      </h3>
+      <div class="row mt-4 p-3">
+         <div class="col-md-6 col-lg-3">
+            <div class="bg-light text-center mb-2 border border-info">
+               <i class="bi bi-truck fs-2 text-info"></i>
+               <h5>Free<br>Delivery</h5>
+               <button class="btn btn-info m-2 fw-normal text-white">Read it</button>
+            </div>
+         </div>
+         <div class="col-md-6 col-lg-3">
+            <div class="bg-light text-center mb-2 border border-info">
+               <i class="bi bi-shield-check fs-2 text-info"></i>
+               <h5>Safe<br>Payment</h5>
+               <button class="btn btn-info m-2 fw-normal text-white">Read it</button>
+            </div>
+         </div>
+         <div class="col-md-6 col-lg-3">
+            <div class="bg-light text-center mb-2 border border-info">
+               <i class="bi bi-cart-check fs-2 text-info"></i>
+               <h5>Payment<br>Condition</h5>
+               <button class="btn btn-info m-2 fw-normal text-white">Read it</button>
+            </div>
+         </div>
+         <div class="col-md-6 col-lg-3">
+            <div class="bg-light text-center mb-2 border border-info">
+               <i class="bi bi-check-circle fs-2 text-info"></i>
+               <h5>Product<br>Guarantee</h5>
+               <button class="btn btn-info m-2 fw-normal text-white">Read it</button>
+            </div>
+         </div>
+      </div>
+      <!--Subscribe-->
+      <div class="row subscribe mt-4 p-5 bg bg-dark align-items-center justify-content-center">
+         <div class="h3 text-white display-7 text-center p-3">
+            <i class="bi bi-envelope p-2 text-info"></i>Subscribe for news
+         </div>
+         <div class="col-lg-6"><input class="form-control" type="text" placeholder="name" required><label for="name"></label>
+         </div>
+         <div class="col-lg-6"><input class="form-control" type="mail" placeholder="email" required><label for="email"></label>
+         </div>
+         <div class="text-center m-2">
+            <button id="subscribe-btn" type="submit" class="btn btn-lg btn-danger">💜 I subscribe</button>
+         </div>
+      </div>
+      <!--Footer-->
+      <footer>
+         <div id="about" class="row justify-content-center" style="background-color: rgba(243, 225, 202, 0.808);">
+         <div class="col-md-6 col-lg-3 m-3">
+            <p class="text-info h5">Availability and pick-up point</p>
+            <p class="fw-bold text-secondary my-0">
+               <i class="bi bi-pc-display-horizontal p-2"></i>Gamer Pc Ltd
+            </p>
+            <p class="my-0 text-secondary">
+               <i class="bi bi-telephone-fill p-2"></i>(718) 892-0402
+            </p>
+            <p class="my-0 text-secondary">
+               <i class="bi bi-envelope-check p-2"></i>info@gamer-webshop.com
+            </p>
+            <p class="text-secondary">
+               <i class="bi bi-align-center p-2"></i>3027 Middletown Rd Bronx, NY 10461
+            </p>
+         </div>
+         <div class="col-md-6 col-lg-3 m-3">
+            <p class="text-info h5">Popular categories</p>
+            <a class="text-decoration-none text-secondary" href="">Mouse and Mousepad</a><br>
+            <a class="text-decoration-none text-secondary" href="">Headset</a><br>
+            <a class="text-decoration-none text-secondary" href="">Gamer table and other</a><br>
+            <a class="text-decoration-none text-secondary" href="">Keyboards</a><br>
+         </div>
+         <div class="col-md-6 col-lg-3 m-3">
+            <p class="text-info h5">Information</p>
+            <a class="text-decoration-none text-secondary" href="">Delivery and payment terms</a><br>
+            <a class="text-decoration-none text-secondary" href="">Privacy Notice</a><br>
+            <a class="text-decoration-none text-secondary" href="">Product Warranty and Returns</a><br>
+            <a class="text-decoration-none text-secondary" href="">Loyalty program sale</a><br>
+         </div>
+         <!--Helpdesk Button + Button Tooltip-->
+         <div class="btn-helpdesk col-md-6 col-lg-3">
+            <a href="tel:718-892-0402">
+               <button type="button" class="col-sm-6 col-md-4 col-lg-3 d-flex align-items-center justify-content-center btn btn-success border-white m-1 fixed-bottom position-sticky-absolute">
+                  Customer Service
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-telephone m-2 position-sticky" viewbox="0 0 16 16">
+                     <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+                  </svg>
+               </button>
+            </a>
+         </div>
+      </footer>
+      <!--Mapbox root-->
+      <div id="map"></div>
+      <!--Mapbox-->
+      <script src="../javascript/mapbox.js"></script>
+      <!--Bootstrap scripts-->
+      <script src="../bootstrap-style/js/jquery-3.6.3.js"></script>
+      <script src="../bootstrap-style/js/popper.min.js"></script>
+      <script src="../bootstrap-style/js/bootstrap.min.js"></script>
+      <script src="../bootstrap-style/js/bootstrap.min.js.map"></script>
+      <script src="../bootstrap-style/js/bootstrap.bundle.min.js"></script>
+   </body>
+</html>
+
