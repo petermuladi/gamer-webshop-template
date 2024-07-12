@@ -1,4 +1,4 @@
-## 🔥Gamer Webshop Template🔥
+# 🔥Gamer Webshop Template🔥
 
 #### You can find the readme.md file of the "Gamer Webshop" project here. It is a simple gamer webshop template project that provides a website template that can be used for selling various PC gaming products. Below you will find the main features and usage of the project.
 
