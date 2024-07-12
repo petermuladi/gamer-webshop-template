@@ -1,0 +1,11 @@
+# Enable Rewrite Engine
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Set the default directory index to html/index.html
+    DirectoryIndex html/index.html
+
+    # Redirect all requests to html/index.html
+    RewriteCond %{REQUEST_URI} ^/$
+    RewriteRule ^(.*)$ html/index.html [L]
+</IfModule>
